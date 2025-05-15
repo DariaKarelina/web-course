@@ -3,7 +3,7 @@ import random
 from flask import Flask, request, session, render_template, redirect, jsonify
 from flask_socketio import SocketIO, emit
 
-app = Flask('CatAndRat')
+app = Flask('CatAndRat', template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
